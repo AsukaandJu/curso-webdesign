@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Kitten Adoption Form</h1>
-    <p>Please fill out this form with the required information</p>
-    <form method="post" action='https://register-demo.freecodecamp.org'>
+    <h1 id='title'>Kitten Adoption Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+  <form id="survey-form">
       <fieldset>
-        <label for="first-name">Enter Your First Name: <input id="first-name-label" name="first-name" type="text" required placeholder="Kitten"/></label>
+        <label for="first-name" id="name-label">Enter Your First Name:<input id="name" name="first-name" type="text" required placeholder="Kitten"/></label>
         <label for="last-name">Enter Your Last Name: <input id="last-name-label" name="last-name" type="text" required placeholder="Mr. Cat" /></label>
-        <label for="email">Enter Your Email: <input id="email-label" name="email" type="email" required /></label>
-        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required placeholder="kitten@mrcat.com"/></label>
-         <label for="cell-phone">
-           Enter Your Cell Phone: <input id="cell-phone-label" name="cell-phone" type="cell-phone" pattern="[0-9]{8,}" min="11" max="12" required placeholder="12345678900"/></label>
+        <label for="email" id="email-label">Enter Your Email:<input id="email" name="email" type="email" placeholder="kitten@gmail.com" value="1" required/></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required  /></label>
+         <label for="cell-phone" id="number-label">
+           Enter Your Cell Phone: <input id="number" name="cell-phone" type="number"cell-phone" pattern="[0-9]{8,}" min="11" max="12" required placeholder="12345678900"/></label>
                 <label for="referrer">How did you hear about us?
-          <select id="referrer" name="referrer">
+          <select id="dropdown" name="referrer">
             <option value="">(select one)</option>
             <option value="1">News</option>
             <option value="2">YouTube Channel</option>
@@ -28,13 +28,14 @@
       </fieldset>
       <fieldset>
         <label>Do You Have Other Pets?</label>
-        <label for="Yes"><input id="Yes" type="radio" name="Yes" class="inline" /> Yes</label>
-        <label for="No"><input id="No" type="radio" name="No" class="inline" />No</label>
+         <label for="Yes"><input id="radio"type="radio"name="radio" class="inline" value="1" /> Yes-cats</label>
+         <label for="Yes"><input id="radio" type="radio"name="radio" class="inline" value="2" /> Yes-dogs</label>
+        <label for="No"><input id="radio"type="radio" name="radio" class="inline" value="2" />No</label>
                 <label for="bio">If yes, tell us about it:
           <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I have 3 cats..."></textarea>
           <label>Tell Us about your home:</label>
           <label for="safe-apt">
-          <input id="safe-apt" type="checkbox" required name="safe-apt"  class="inline" value="" />I live in an apartment with a safety net on the window.
+          <input id="safe-apt" type="checkbox" required name="safe-apt"  class="inline" value="5" />I live in an apartment with a safety net on the window.
 
           <label for="safe-home">
           <input id="safe-home" type="checkbox" required name="safe-home" class="inline" value="1"/> I live in a house with a safety net on the window and garden.
@@ -48,10 +49,10 @@
       </fieldset>
       <fieldset>
         <label for="terms-and-conditions">
-          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-        
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" value="4"/> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>  
       </fieldset>
-      <input type="submit" value="Submit" />
+        <input id="submit" type="submit"          value="Submit" />
     </form>
   </body>
+</html>
 </html>
